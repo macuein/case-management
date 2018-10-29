@@ -1,6 +1,6 @@
 create table organizations
 (
-     org_id integer not null,
+     org_id bigint not null,
      org_code varchar(255) not null,
      org_description varchar(255) not null,
      primary key(org_id)
@@ -8,27 +8,17 @@ create table organizations
 
 create table users
 (
-     user_id integer not null,
-     org_id int not null,
+     user_id bigint not null,
+     org_id bigint not null,
      user_code varchar(255) not null,
      user_name varchar(255) not null,
      primary key (user_id)
 );
 
-create table queues
-(
-   queue_id integer not null,
-   org_id integer not null,
-   queue_code varchar(255) not null,
-   queue_description varchar(255) not null,
-   primary key(queue_id)
-);
-
 create table cases
 (
-   case_id integer not null,
-   queue_id integer not null,
-   org_id integer not null,
+   case_id bigint not null,
+   org_id bigint not null,
    case_code varchar(255) not null,
    case_description varchar(255) not null,
    case_reference varchar(255) not null,
@@ -37,16 +27,29 @@ create table cases
    primary key(case_id)
 );
 
-create table tasks
-(
-   task_id integer not null,
-   case_id integer not null,
-   user_id integer,
-   task_code varchar(255) not null,
-   task_description varchar(255) not null,
-   task_notes varchar(255) not null,
-   task_attachments varchar(255),
-   primary key(task_id)
-);
+
+--create table queues
+--(
+--  id bigint not null,
+--   org_id bigint not null,
+--   code varchar(255) not null,
+--   description varchar(255) not null,
+--   primary key(id)
+--);
+
+
+
+--create table tasks
+--(
+--   id bigint not null,
+--   case_id bigint not null,
+--  queue_id bigint not null,
+--   user_id bigint,
+--   code varchar(255) not null,
+--   description varchar(255) not null,
+--   notes varchar(255) not null,
+--   attachments varchar(255),
+--   primary key(id)
+--);
 
 

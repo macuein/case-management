@@ -9,56 +9,10 @@
     <version>1.0.0-SNAPSHOT</version>
     <modules>
         <module>cm-rest-server</module>
+        <module>bpmn-camunda</module>
     </modules>
     <name>case-management</name>
     <packaging>pom</packaging>
 
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <java.version>1.8</java.version>
-        <maven.compiler.target>1.8</maven.compiler.target>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <spring-boot.version>2.0.5.RELEASE</spring-boot.version>
-        <spring-cloud.version>Finchley.SR1</spring-cloud.version>
-        <spring-boot-maven-plugin.version>2.0.5.RELEASE</spring-boot-maven-plugin.version>
-        <lombok.version>1.18.2</lombok.version>
-        <h2.version>1.4.197</h2.version>
-    </properties>
-
-    <dependencyManagement>
-        <dependencies>
-
-            <dependency>
-                <!-- Import dependency management from Spring Boot -->
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-dependencies</artifactId>
-                <version>${spring-boot.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-
-            <dependency>
-                <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-dependencies</artifactId>
-                <version>${spring-cloud.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-
-        </dependencies>
-    </dependencyManagement>
-
-    <build>
-        <pluginManagement>
-            <plugins>
-                <plugin>
-                    <groupId>org.springframework.boot</groupId>
-                    <artifactId>spring-boot-maven-plugin</artifactId>
-                    <version>${spring-boot-maven-plugin.version}</version>
-                </plugin>
-            </plugins>
-        </pluginManagement>
-    </build>
 
 </project>
