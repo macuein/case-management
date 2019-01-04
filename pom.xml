@@ -10,7 +10,9 @@
     <modules>
         <module>cm-rest-server</module>
         <module>bpmn-camunda</module>
+        <module>bpm-ref-impl</module>
     </modules>
+
     <name>case-management</name>
     <packaging>pom</packaging>
 

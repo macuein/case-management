@@ -42,6 +42,6 @@ public class Application implements CommandLineRunner {
         logger.info("All cases -> {}", casesrepo.findAll());
     }
 
-\\
+
 
 }
